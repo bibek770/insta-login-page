@@ -62,7 +62,7 @@ export const LoginForm = () => {
           </div>
 
           <div className="card signup-card">
-            <p>Don't have an account? <a href="# " target="blank">Sign up</a></p>//!link sign up page
+            <p>Don't have an account? <a href="# " target="blank">Sign up</a></p>
           </div>
 
           <div className="get-app-section">
