@@ -1,0 +1,256 @@
+ /* --- 1. Global Reset & Base Styles --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #fafafa;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  color: #262626;
+}
+
+/* Container that holds the main content and footer */
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Middle section containing the phone and form */
+.main-container {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 32px;
+}
+
+/* --- 2. Phone Visuals (Hidden on small screens) --- */
+.phone-visuals {
+  display: none; /* Default hidden for mobile */
+}
+
+.phone-visuals img {
+  height: 580px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* --- 3. Auth Wrapper (Login Form Area) --- */
+.auth-wrapper {
+  width: 100%;
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dbdbdb;
+  padding: 20px 40px;
+  text-align: center;
+}
+
+.instagram-logo {
+  font-family: 'Cookie', cursive; 
+  font-size: 3.5rem;
+  margin: 25px 0;
+  font-weight: 400;
+}
+
+/* --- 4. Form Styling --- */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-form input {
+  background: #fafafa;
+  border: 1px solid #dbdbdb;
+  border-radius: 3px;
+  padding: 10px 8px;
+  font-size: 12px;
+  width: 100%;
+}
+
+.login-form input:focus {
+  border: 1px solid #a8a8a8;
+  outline: none;
+}
+
+.login-btn {
+  background-color: #0095f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px;
+  font-weight: 600;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+  background-color: #1877f2;
+}
+
+/* --- 5. Separator & Social Login --- */
+.separator {
+  display: flex;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #dbdbdb;
+}
+
+.or-text {
+  margin: 0 15px;
+  color: #8e8e8e;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.fb-login-btn {
+  background: none;
+  border: none;
+  color: #385185;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.fb-icon {
+  background-color: #385185;
+  color: white;
+  padding: 0 5px;
+  border-radius: 2px;
+  font-size: 12px;
+}
+
+.forgot-password {
+  font-size: 12px;
+  text-decoration: none;
+  color: #00376b;
+}
+
+.signup-card {
+  padding: 20px;
+  font-size: 14px;
+}
+
+.signup-card a {
+  color: #0095f6;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* --- 6. App Store Section (Balanced) --- */
+.get-app-section {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.app-buttons {
+  /* display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px; */
+
+   display: flex;
+  gap: 10px;
+  align-items: center; 
+  margin-left: 65px;
+
+}
+
+
+.google-div img{
+    height: 70px;
+
+}
+
+.micro-div img{
+    height: 35px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* --- 7. Footer Section --- */
+.footer-section {
+  padding: 24px 20px;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px 16px;
+  margin-bottom: 15px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+.footer-copyright {
+  color: #8e8e8e;
+  font-size: 12px;
+}
+
+/* --- 8. MEDIA QUERIES --- */
+
+/* Tablet & Desktop: Show Phone Visuals */
+@media (min-width: 875px) {
+  .phone-visuals {
+    display: block;
+  }
+}
+
+/* Small Tablets & Large Phones */
+@media (max-width: 768px) {
+  .main-container {
+    gap: 0;
+  }
+}
+
+/* Small Phones: Clean Edge-to-Edge look */
+@media (max-width: 450px) {
+  body {
+    background-color: white;
+  }
+
+  .main-container {
+    padding: 0;
+    align-items: flex-start;
+    margin-top: 10px;
+  }
+
+  .card {
+    border: none;
+    padding: 20px;
+  }
+
+  .footer-links {
+    gap: 10px;
+  }
+}
